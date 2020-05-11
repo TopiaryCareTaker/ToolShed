@@ -1,0 +1,23 @@
+//mixins for device break points
+@mixin tablet {
+	@media all and (min-width: $break2) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media all and (min-width: $break3) {
+		@content;
+ 	}
+}
+
+// USE THIS TO REDUCE AMOUNNT OF MEDIA QUERIES NEEDED TO CHANGE FONT SIZES IN DEPENDENT MODULES
+// I LIKE THE SINGLE BREAKPOINT MIXIN FOR ALL QUERIES AND APPLYING THE PROPER VARIABLE. YOU CAN USE THE MIXIN IN AS MANY FORMS AS YOU WANT AND EVEN CREATE ARBITRARY WORKS
+
+
+// @include breakpoint(md) {
+//     :root {
+//         --text-base-size: 1.25em;
+//         --text-scale-ratio: 1.25;
+//     }
+// }

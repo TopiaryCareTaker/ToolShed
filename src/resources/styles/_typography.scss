@@ -1,0 +1,100 @@
+/* -------------------------------- 
+Typography
+-------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form legend {
+	margin-bottom: var(--space-xxs);
+	margin-top: var(--space-sm);
+	line-height: var(--heading-line-height);
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+	margin-top: var(--space-lg);
+}
+
+.text--xxxl {
+	font-size: var(--text-xxxl);
+}
+
+h1,
+.text--xxl,
+.header--main-title {
+	font-size: var(--text-xxl);
+}
+
+h2,
+.text--xl,
+.header--title {
+	font-size: var(--text-xl);
+}
+
+h3,
+.text--lg,
+.header--sub-title {
+	font-size: var(--text-lg);
+}
+
+h4,
+.text--md {
+	font-size: var(--text-md);
+}
+
+h5,
+.text--sm,
+small {
+	font-size: var(--text-sm);
+}
+
+h6,
+.text--xs {
+	font-size: var(--text-xs);
+}
+
+p {
+	font-size: var(--text-sm);
+	line-height: var(--body-line-height);
+	margin-bottom: var(--space-md);
+}
+
+a {
+	font-size: inherit;
+	color: var(--green);
+	&:visited {
+		color: var(--green-dark);
+	}
+	&:hover {
+		color: var(--green-light);
+	}
+}
+
+b,
+strong {
+	font-size: inherit;
+	text-shadow: 1px 1px 0px var(--green-light);
+}
+
+em {
+	font-size: inherit;
+	font-style: italic;
+}
+
+u {
+	font-size: inherit;
+	text-decoration: underline;
+}
+
+ul li,
+ol li {
+	font-size: var(--text-sm);
+	line-height: var(--body-line-height);
+}
