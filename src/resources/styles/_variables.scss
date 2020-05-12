@@ -1,12 +1,10 @@
 :root {
 	--player2: "Press Start 2P", sans-serif;
 
-	//break widths
 	--break1: 504px;
 	--break2: 1024px;
 	--break3: 1170px;
 
-	//@colors
 	--gray-dark: #0a0a0a;
 	--gray: #222;
 	--gray-light: #3d3d3d;
@@ -15,20 +13,14 @@
 	--green: #11d217;
 	--green-light: #00ff28;
 
-	//@unit scale
 	--base-unit: 8px;
 
-	//********************************************************************
-	//integrate these ideas
-	//********************************************************************
 	--font-primary: sans-serif;
 	--font-secondary: serif;
 
-	/* set base values */
 	--text-base-size: 1em;
 	--text-scale-ratio: 1.2;
 
-	/* type scale */
 	--text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
 	--text-sm: calc(1em / var(--text-scale-ratio));
 	--text-md: calc(1em * var(--text-scale-ratio));
@@ -47,13 +39,9 @@
 			var(--text-scale-ratio)
 	);
 
-	/* line-height */
 	--heading-line-height: 1.4;
 	--body-line-height: 2.1;
 
-	//************
-	//ADDED VARIABLES
-	//************
 	--space-unit: 1em;
 	--space-xxs: calc(0.25 * var(--space-unit));
 	--space-xs: calc(0.5 * var(--space-unit));
@@ -64,7 +52,6 @@
 	--space-xxl: calc(5.25 * var(--space-unit));
 }
 
-//SCSS variables maybe sunset or keep around for legacy browser that do not use CSS VARIABLES
 $player2: "Press Start 2P", sans-serif;
 
 //break widths
