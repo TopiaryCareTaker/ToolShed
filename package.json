@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TopiaryCareTaker/LightSoilPot.git"
+    "url": "https://github.com/TopiaryCareTaker/ToolShed.git"
   },
   "author": "Caretaker",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TopiaryCareTaker/LightSoilPot/issues"
+    "url": "https://github.com/TopiaryCareTaker/ToolShed/issues"
   },
-  "homepage": "https://github.com/TopiaryCareTaker/LightSoilPot#readme",
+  "homepage": "https://github.com/TopiaryCareTaker/ToolShed#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "css-loader": "^3.5.3",

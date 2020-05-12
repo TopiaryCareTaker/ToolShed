@@ -1,0 +1,188 @@
+//input resets without BEM needs cleanup
+input[type="number"],
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="button"],
+input[type="range"],
+select,
+select[multiple],
+option {
+	// YOU neED TO FIX THE MULTIPKE SEKECTIT
+	appearance: none;
+	border: none;
+	background-color: var(--gray-light);
+	color: var(--green);
+	padding-left: var(--base-unit);
+	width: 100%;
+	height: 100%;
+	outline: none;
+	font-size: var(--text-sm);
+	margin: 0px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+		border: none;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+
+	&:checked ~ label:after {
+		background-color: var(--green);
+	}
+}
+
+input[type="number"] {
+	appearance: textfield;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		margin: 0;
+		-webkit-appearance: none;
+	}
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
+input[type="range"] {
+	padding-left: 0px;
+
+	&::-webkit-slider-runnable-track {
+		height: 100%;
+	}
+
+	&::-webkit-slider-thumb {
+		appearance: none;
+		height: 100%;
+		width: 34px; //might need to stay though not a multiple of base unit
+		background-color: $green;
+	}
+}
+
+select[multiple] {
+	padding: $base-unit;
+
+	@include desktop() {
+		height: inherit;
+	}
+	&:focus,
+	&:active {
+		outline: none;
+		appearance: none;
+		box-shadow: none;
+	}
+	option {
+		padding-top: var(--base-unit);
+		padding-bottom: var(--base-unit);
+		min-height: var(--base-unit);
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: var(--base-unit);
+
+		&:focus,
+		&:active {
+			outline: none;
+			appearance: none;
+			box-shadow: none;
+		}
+	}
+}
+
+//Input styles
+.field {
+	display: flex;
+	flex-direction: column;
+
+	& + & {
+		margin-top: $base-unit * 4;
+	}
+	&__label {
+		font-size: var(--text-sm);
+		line-height: var(--body-line-height);
+		margin-bottom: var(--base-unit);
+	}
+	&__input {
+		display: flex;
+		flex-direction: row;
+		height: $base-unit * 5;
+
+		&--radio-group,
+		&--checkbox-group {
+			flex-wrap: wrap;
+			height: auto;
+		}
+		&--radio,
+		&--checkbox {
+			position: relative;
+			height: $base-unit * 2;
+			margin-right: $base-unit * 5;
+			margin-bottom: $base-unit * 2;
+
+			//this is only specific for this
+			label {
+				margin-left: $base-unit * 4;
+				position: relative;
+				cursor: pointer;
+				white-space: nowrap;
+			}
+			label:after {
+				content: "";
+				width: $base-unit * 3;
+				height: $base-unit * 3;
+				background-color: var(--gray-light);
+				display: inline-block;
+				position: absolute;
+				left: $base-unit * -4;
+				top: -6px; //this needs works
+			}
+		}
+
+		&--select-multiple {
+			height: inherit;
+		}
+	}
+	&__input-controls {
+		background-color: var(--gray-dark);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 15%; //this will be a modifier
+		min-width: $base-unit * 10;
+	}
+}
+
+.input-control {
+	//this needs a better name
+	&__button {
+		height: 100%;
+		width: 33%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&--plus,
+		&--minus {
+			&:hover {
+				background-color: var(--gray-light);
+			}
+		}
+	}
+
+	&__output {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 0px var(--base-unit);
+	}
+}

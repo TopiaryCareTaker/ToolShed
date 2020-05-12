@@ -1,3 +1,4 @@
-import './index.scss';
-import './resources/images/headerImage.png';
-import './resources/images/favicon.png';
+import "./index.scss";
+import StepInput from "./resources/scripts/InputStep";
+
+const nInput = new StepInput("numberInputOne");

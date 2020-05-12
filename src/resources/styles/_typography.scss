@@ -1,0 +1,146 @@
+/* -------------------------------- 
+Typography
+-------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form legend {
+	margin-bottom: var(--space-xxs);
+	margin-top: var(--space-sm);
+	line-height: var(--heading-line-height);
+}
+
+h1 {
+	font-size: var(--text-xl);
+	@include tablet() {
+		font-size: var(--text-xxl);
+	}
+}
+
+h2 {
+	font-size: var(--text-lg);
+	@include tablet() {
+		font-size: var(--text-xl);
+	}
+}
+
+h3 {
+	font-size: var(--text-md);
+	@include tablet() {
+		font-size: var(--text-lg);
+	}
+}
+
+h4 {
+	font-size: var(--text-sm);
+	@include tablet() {
+		font-size: var(--text-md);
+	}
+}
+
+h5,
+small {
+	font-size: var(--text-xs);
+	@include tablet() {
+		font-size: var(--text-sm);
+	}
+}
+
+h6 {
+	font-size: var(--text-xs);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& + p {
+		margin-top: var(--space-lg);
+	}
+}
+
+.text {
+	&--xxxl {
+		font-size: var(--text-xxxl);
+	}
+
+	&--xxl {
+		@extend h1;
+	}
+
+	&--xl {
+		@extend h2;
+	}
+
+	&--lg {
+		@extend h3;
+	}
+
+	&--md {
+		@extend h4;
+	}
+
+	&--sm {
+		@extend h5;
+	}
+
+	&--xs {
+		@extend h6;
+	}
+}
+
+p {
+	font-size: var(--text-xs);
+	line-height: var(--body-line-height);
+	margin-bottom: var(--space-md);
+	@include tablet() {
+		font-size: var(--text-sm);
+	}
+}
+
+a {
+	font-size: inherit;
+	color: var(--green);
+	&:visited {
+		color: var(--green-dark);
+	}
+	&:hover {
+		color: var(--green-light);
+	}
+}
+
+b,
+strong {
+	font-size: inherit;
+	text-shadow: 1px 1px 0px var(--green-light);
+}
+
+em {
+	font-size: inherit;
+	font-style: italic;
+}
+
+u {
+	font-size: inherit;
+	text-decoration: underline;
+}
+
+ul li,
+ol li {
+	font-size: var(--text-sm);
+	line-height: var(--body-line-height);
+}
+sup,sub {
+	vertical-align: baseline;
+	position: relative;
+	top: calc(var(--space-xxs) * -1);
+	left: 2px;
+}
+sub {
+	top: var(--space-xxs);
+}
