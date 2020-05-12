@@ -135,12 +135,4 @@ ol li {
 	font-size: var(--text-sm);
 	line-height: var(--body-line-height);
 }
-sup,sub {
-	vertical-align: baseline;
-	position: relative;
-	top: calc(var(--space-xxs) * -1);
-	left: 2px;
-}
-sub {
-	top: var(--space-xxs);
-}
+
