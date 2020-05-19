@@ -111,6 +111,14 @@ a {
 	}
 	&:hover {
 		color: var(--green-light);
+		text-decoration: none;
+	}
+	&:focus {
+		outline-color: var(--green);
+		outline-style: solid;
+		outline-width: 1px;
+		outline-offset: 3px;
+		text-decoration: none;
 	}
 }
 
@@ -132,7 +140,9 @@ u {
 
 ul li,
 ol li {
-	font-size: var(--text-sm);
-	line-height: var(--body-line-height);
+	@extend p;
+	margin-bottom: var(--space-sm);
+	&:last-child {
+		margin-bottom: 0px;
+	}
 }
-

@@ -1,13 +1,8 @@
-
-ul,
-ol{
-	margin-bottom: var(--space-md);
-}
-
 ul,
 ol {
 	list-style-position: outside;
-	padding-left: 24px;
+	padding-left: calc(var(--base-unit) * 3);
+	margin-bottom: var(--space-md);
 }
 
 ul {
@@ -17,4 +12,3 @@ ul {
 ol {
 	list-style-type: decimal;
 }
-
