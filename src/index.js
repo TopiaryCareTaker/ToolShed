@@ -1,4 +1,4 @@
-import "./index.scss";
-import StepInput from "./resources/scripts/InputStep";
+import './index.scss';
+import StepInput from './resources/scripts/InputStep';
 
-const nInput = new StepInput("numberInputOne");
+const nInput = new StepInput('numberInputOne');
